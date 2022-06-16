@@ -21,7 +21,7 @@ module.exports = async () => {
   const { db } = await DB();
   app.set('db', db);
 
-  app.use(express.static(path.join(__dirname, '../public')));
+  app.use(express.static(path.join(__dirname, '../build')));
 
   // Enable CORS
   app.use((req, res, next) => {
